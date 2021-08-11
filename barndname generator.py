@@ -1,3 +1,7 @@
+'''
+brand name generator is a basic project used for testing understanding in print function and input function.It is the day 1 project in 
+Complete python bootcamp 2021
+
 #1. Create a greeting for your program.
 print("Welcome to brand name Generator \n")
 #2. Ask the user for the city that they grew up in.
