@@ -1,0 +1,8 @@
+print("Welcome to the trip calculator")
+bill=float(input("What was the total bill? "))
+percent_tip=float(input('What percent of tip woud you like to give ? 10,12 or 15? '))
+calculted_tip=float(bill*(percent_tip/100))
+total_amount=bill+calculted_tip
+count_people=int(input('How many people to split the bill? '))
+each_pay=round(total_amount/count_people,2)
+print(f"Each person should pay:{each_pay} $")
