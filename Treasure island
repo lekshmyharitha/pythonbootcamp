@@ -1,3 +1,7 @@
+'''
+Create treasure island using conditionals
+For Ascii art  https://ascii.co.uk/art 
+''''
 print('''
 *******************************************************************************
           |                   |                  |                     |
