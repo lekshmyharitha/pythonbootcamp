@@ -1,0 +1,53 @@
+import art
+from art import logo
+import clear
+print(logo)
+
+def addition(n1,n2):
+   sum=n1+n2
+   return sum
+def subtraction(n1,n2):
+    sub=n1-n2
+    return sub
+def division(n1,n2):
+    divi= n1/n2
+    return divi
+def multipilication(n1,n2):
+    multi=n1*n2
+    return multi
+
+operations={'+' :addition,'-':subtraction,'/':division,'*':multipilication}
+#print(calc)
+#accessing function
+#function=operations['+']
+#a=function(2,3)
+#print(a)
+def getinput():
+    n1=int(input('Enter your the first digit '))
+    n2=int(input('Enter your the second digit '))
+    symbols=[]
+    for keys in operations:
+          symbols.append(keys)
+    operator=input(f'Which operator you want to select {symbols} ? ')
+    function=operations[operator]
+    answer=function(n1,n2)
+    print(f'{n1}{operator}{n2}={answer}')
+    status1=input('Do you want to continues this with another operator')
+    if status1.lower()=='yes':
+         n3=int(input('Enter your the second digit '))
+         operator2=input(f'Which operator you want to select {symbols} ? ')
+         function=operations[operator2]
+         newanswer=function(answer,n3)
+         print(f'{answer}{operator}{n3}={newanswer}')
+    else:    
+         pass
+    status2=input('Do you want to continues? Type yes or no')
+    
+    if status2.lower()=='yes':
+        #clear()
+             getinput()
+    elif status2.lower()=='no':
+             exit()
+    else:
+             print('Invalid operation')
+getinput()
