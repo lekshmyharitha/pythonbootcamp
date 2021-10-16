@@ -1,0 +1,40 @@
+import art
+from art import logo,vs
+print(logo)
+import random
+import game_data 
+from game_data import data
+
+score=0
+def checker():
+    global score
+    random_1=random.choice(data)
+    print(random_1['name'])
+    print("Compare A: ",random_1['name'],random_1['description'],random_1['country'])
+    print(vs)
+    random_2=random.choice(data)
+    print("Aganist B: ",random_2['name'],random_2['description'],random_2['country'])
+    user_input=input('who has more followers, Type A OR B')
+    if user_input=='A' :
+       if random_1['follower_count'] > random_2['follower_count']:
+            score=score+1
+            user_cont=input("Whether you want to continue,Type yes of no")
+            if user_cont.lower()=='yes':
+                  checker()
+            elif user_cont.lower()=='no'
+                  print("Game end",score)
+                  exit
+       elif random_1['follower_count'] < random_2['follower_count']:
+            print(f"You are wrong,Final score is {score}")
+            exit
+    elif user_input=='B':
+       if random_1['follower_count'] < random_2['follower_count']:
+            score=score+1
+            user_cont=input("Whether you want to continue,Type yes of no")
+            if user_cont.lower()=='yes':
+                  checker()
+       elif random_1['follower_count'] > random_2['follower_count']:
+            print(f"You are wrong,Final score is ",score)
+            exit
+    
+checker()
